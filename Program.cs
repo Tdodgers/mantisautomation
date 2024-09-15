@@ -25,7 +25,7 @@ namespace MantisAutomation
                     TestCreateBug(driver, wait);
                     
                     // Testar edição de bug
-                    //TestEditBug(driver, wait);
+                    TestEditBug(driver, wait);
                     
                     // Testar logout
                     TestLogout(driver, wait);
@@ -167,7 +167,27 @@ namespace MantisAutomation
 
                 // Opcional: Adicione um tempo de espera ou uma verificação após o envio
                 System.Threading.Thread.Sleep(2000); // Espera 2 segundos
+                
+                // Encontra a <div> pela classe
+                var dropzoneDiv = wait.Until(drv => drv.FindElement(By.CssSelector("div.dropzone.center.dz-clickable")));
 
+                // Clica na <div> para abrir o diálogo de upload
+                dropzoneDiv.Click();
+
+                // Aguarda um breve momento para garantir que o diálogo de upload foi aberto
+                System.Threading.Thread.Sleep(1000);
+
+                // Encontra o <input> do tipo file, que pode ter sido inserido dinamicamente ou estar presente
+                var fileInput = driver.FindElement(By.CssSelector("input[type='file']"));
+
+                // Caminho para o arquivo que você deseja fazer upload
+                string filePath = @"C:\Users\Thiago\Downloads\Thiago_Pereira´s_Projec.csv"; //Alterar o local em que o arquivo se encontra
+
+                // Envia o caminho do arquivo para o input
+                fileInput.SendKeys(filePath);
+
+                // Aguarda um breve momento para garantir que o upload foi realizado
+                System.Threading.Thread.Sleep(3000);
                 
                 //Encontra e clica no botão "add note"
                 IWebElement addNoteButton = driver.FindElement(By.CssSelector("input[type='submit'][value='Add Note']"));

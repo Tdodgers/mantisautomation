@@ -19,3 +19,4 @@ C:\TesteAutomatizadoMantis\MantisAutomation\obj\Debug\net8.0\refint\MantisAutoma
 C:\TesteAutomatizadoMantis\MantisAutomation\obj\Debug\net8.0\MantisAutomation.pdb
 C:\TesteAutomatizadoMantis\MantisAutomation\obj\Debug\net8.0\MantisAutomation.genruntimeconfig.cache
 C:\TesteAutomatizadoMantis\MantisAutomation\obj\Debug\net8.0\ref\MantisAutomation.dll
+C:\TesteAutomatizadoMantis\MantisAutomation\obj\Debug\net8.0\MantisAutomation.sourcelink.json
