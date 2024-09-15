@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MantisAutomation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+432aed82f371ed7b178c91fa63354d60ab3e6aeb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e27f5769bb2031dbad0f9a68d261b9dc1e3af083")]
 [assembly: System.Reflection.AssemblyProductAttribute("MantisAutomation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MantisAutomation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

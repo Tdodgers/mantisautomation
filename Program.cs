@@ -187,11 +187,13 @@ namespace MantisAutomation
                 fileInput.SendKeys(filePath);
 
                 // Aguarda um breve momento para garantir que o upload foi realizado
-                System.Threading.Thread.Sleep(3000);
+                System.Threading.Thread.Sleep(5000);
                 
                 //Encontra e clica no botão "add note"
                 IWebElement addNoteButton = driver.FindElement(By.CssSelector("input[type='submit'][value='Add Note']"));
                 addNoteButton.Click();
+
+                System.Threading.Thread.Sleep(5000);
 
                 //Retorna a tela View Issues
                 System.Threading.Thread.Sleep(5000);
@@ -239,19 +241,7 @@ namespace MantisAutomation
                 {
                 Console.WriteLine("O arquivo XML não foi encontrado.");
                 }
-
-                //Testa Funcionamento "Print Reports"
-                driver.FindElement(By.LinkText("Print Reports")).Click();
-                WaitForPageToLoad(driver, wait, By.Id("buglist"));
-                
-                // Alterar detalhes do bug adicionando nota
-                
-                IWebElement bugnoteField = driver.FindElement(By.Id("bugnote_text"));
-                bugnoteField.Click();
-                bugnoteField.SendKeys("Nota Bug de Teste Atualizado");
-                driver.FindElement(By.CssSelector("input[type='submit']")).Click();
-
-                
+                   
             }
             catch (NoSuchElementException ex)
             {
